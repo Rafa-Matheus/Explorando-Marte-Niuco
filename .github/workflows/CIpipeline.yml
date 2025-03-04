@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: '7.0.x'
     - name: Restaurar as dependências
-      uses: dotnet restore Explorando-Marte-Niuco.sln
+      run: dotnet restore Explorando-Marte-Niuco.sln
     - name: Compilar
       run: dotnet build Explorando-Marte-Niuco.sln --configuration Release --no-restore
     - name: Executar testes
