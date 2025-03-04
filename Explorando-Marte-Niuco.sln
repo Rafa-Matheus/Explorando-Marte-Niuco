@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explorando-Marte-Niuco", "Explorando-Marte-Niuco\Explorando-Marte-Niuco.csproj", "{74F850E8-C290-40DD-93B8-7009A039D373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Explorando-Marte-Niuco.Test", "Explorando-Marte-Niuco.Test\Explorando-Marte-Niuco.Test.csproj", "{B3D0AC23-4D8E-49A4-B080-F0091F16CC6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74F850E8-C290-40DD-93B8-7009A039D373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F850E8-C290-40DD-93B8-7009A039D373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F850E8-C290-40DD-93B8-7009A039D373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F850E8-C290-40DD-93B8-7009A039D373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3D0AC23-4D8E-49A4-B080-F0091F16CC6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D0AC23-4D8E-49A4-B080-F0091F16CC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D0AC23-4D8E-49A4-B080-F0091F16CC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D0AC23-4D8E-49A4-B080-F0091F16CC6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
