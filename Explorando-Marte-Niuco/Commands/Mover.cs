@@ -26,10 +26,14 @@ namespace Explorando_Marte_Niuco.Commands
             }
 
             if (!planalto.DentroDosLimites(novoX, novoY))
-                throw new ArgumentException($"Operação cancelada. Movimento para fora dos limites do Planalto: ({planalto.XMax} x {planalto.YMax}). Ajuste o planejamento da operação e tente novamente mais tarde.\n");
+                throw new ArgumentException($"Operação cancelada! Movimento para fora dos limites do Planalto: ({planalto.XMax} x {planalto.YMax}). Ajuste o planejamento da operação e tente novamente mais tarde.\n");
+            if (!planalto.PosicaoLivre(novoX, novoY))
+                throw new ArgumentException($"Operação cancelada! Outra sonda está obstruindo o trajeto pretendido para a operação ({novoX} x {novoY}). Ajuste o planejamento da operação e tente novamente mais tarde.");
             
+            planalto.LiberarPosicao(sonda.X, sonda.Y);
             sonda.X = novoX;
-            sonda.Y = novoY;            
+            sonda.Y = novoY;
+            planalto.OcuparPosicao(novoX, novoY);            
         }
     }
 }

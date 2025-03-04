@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace Explorando_Marte_Niuco.Models
@@ -19,5 +20,10 @@ namespace Explorando_Marte_Niuco.Models
         }
 
         public bool DentroDosLimites(int x, int y) => x >= 0 && x <= XMax && y >= 0 && y <= YMax;
+        public bool PosicaoLivre(int x, int y) => !_posicoesOcupadas.Contains((x, y));
+        public void OcuparPosicao(int x, int y) => _posicoesOcupadas.Add((x, y));
+        public void LiberarPosicao(int x, int y) => _posicoesOcupadas.Remove((x, y));
+
+        public HashSet<(int, int)> PosicoesOcupadas => _posicoesOcupadas;
     }
 }
