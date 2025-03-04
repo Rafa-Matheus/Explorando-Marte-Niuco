@@ -1,0 +1,25 @@
+name: Pipeline CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Baixar código
+      uses: actions/checkout@v4
+    - name: Configurar .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '7.0.x'
+    - name: Restaurar as dependências
+      uses: dotnet restore Explorando-Marte-Niuco.sln
+    - name: Compilar
+      run: dotnet build Explorando-Marte-Niuco.sln --configuration Release --no-restore
+    - name: Executar testes
+      run: dotnet test Explorando-Marte-Niuco.Test/Explorando-Marte-Niuco.Test.csproj --configuration Release --no-build --verbosity normal 
