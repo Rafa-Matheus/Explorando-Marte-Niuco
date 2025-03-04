@@ -38,7 +38,7 @@ while(true)
 
     try
     {
-        System.Console.WriteLine("Checagem de Segurança. Analisando as informações da rota a ser percorrida...\n");
+        System.Console.WriteLine("\nChecagem de Segurança. Analisando as informações da rota a ser percorrida...");
         sondaService.ChecarSegurancaDoPercursoProgramado(x, y, direcao, sequenciaComandos); // Para aqui se não puder prosseguir com a operação
         
         System.Console.WriteLine("Operação permitida. Iniciando...\n");
@@ -46,7 +46,7 @@ while(true)
         var sonda = sondaFactory.CriarSonda(x, y, direcao);
         sondaService.ExecutarComandos(sonda, sequenciaComandos);
 
-        System.Console.WriteLine($"Posição final da sonda: {sonda.X} x {sonda.Y}");
+        System.Console.WriteLine($"Posição final da sonda: {sonda.X} x {sonda.Y} {sonda.Direcao}\n");
     }
     catch(Exception ex)
     {
@@ -59,4 +59,4 @@ while(true)
     if (resposta != "Y") break; 
 }
 
-System.Console.WriteLine("Obrigado.");
+System.Console.WriteLine("\nObrigado.");
