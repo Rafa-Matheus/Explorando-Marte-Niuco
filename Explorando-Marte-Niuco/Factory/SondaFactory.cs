@@ -18,7 +18,7 @@ namespace Explorando_Marte_Niuco.Factory
         public Sonda CriarSondaSimulada(int x, int y, char direcao, Planalto planalto)
         {
            if (!planalto.DentroDosLimites(x, y)) throw new ArgumentException("Operação cancelada: Posição inicial fora dos limites do Planalto. ");
-           if (!planalto.PosicaoLivre(x, y)) throw new ArgumentException("Opeação cancelada: Posição inicial já está ocupada por outra sonda.");
+           if (!planalto.PosicaoLivre(x, y)) throw new ArgumentException("Operação cancelada: Posição inicial já está ocupada por outra sonda.");
 
            var sonda = new Sonda(x, y, direcao);
            planalto.OcuparPosicao(x, y);
