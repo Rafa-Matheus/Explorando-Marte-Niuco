@@ -1,4 +1,4 @@
-# Explorando-Marte-Niuco# Explorando Marte Niuco 2025
+# Desafio Niuco 2025 | Explorando Marte
 
 Esta é uma solução em C# .NET 7.0 para o desafio técnico da Niuco, onde controlo sondas em Marte com comandos como **L** (girar à esquerda), **R** (girar à direita) e **M** (mover), respeitando limites do planalto e evitando colisões, com validação de segurança antes da execução. Utilizo padrões como **Command** e **Factory**, princípios **SOLID**, testes **xUnit** e **CI no GitHub Actions**.
 
@@ -53,7 +53,7 @@ dotnet run --project Explorando-Marte-Niuco/Explorando-Marte-Niuco.csproj
 
 - **Simulação de Segurança**: Adicionei `CriarSondaSimulada` no `SondaService` pra testar trajetos antes de alterar o planalto real, ideia minha pra maior robustez.
 - **Command Pattern**: Usei pra organizar os comandos `L`, `R` e `M`, tornando o código extensível.
-- **Factory Pattern**: Escolhi pra separar criação de sondas reais e simuladas na `FabricaSonda`, diminuindo acoplamento.
+- **Factory Pattern**: Escolhi pra separar criação de sondas reais e simuladas na `SondaFactory`, diminuindo acoplamento.
 - **Ajuste nos Testes**: Corrigi mensagens de erro nos testes xUnit, garantindo precisão.
 - **Correção no CI**: Troquei `uses` por `run` no `dotnet restore` do GitHub Actions, resolvendo um erro de execução.
 
