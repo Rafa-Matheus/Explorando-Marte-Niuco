@@ -49,6 +49,14 @@ dotnet run --project Explorando-Marte-Niuco/Explorando-Marte-Niuco.csproj
 ### Programa (`Program.cs`):
 - Interface com o usuário e coordenação da execução.
 
+## Decisões do Projeto
+
+- **Simulação de Segurança**: Adicionei `CriarSondaSimulada` no `SondaService` pra testar trajetos antes de alterar o planalto real, ideia minha pra maior robustez.
+- **Command Pattern**: Usei pra organizar os comandos `L`, `R` e `M`, tornando o código extensível.
+- **Factory Pattern**: Escolhi pra separar criação de sondas reais e simuladas na `FabricaSonda`, diminuindo acoplamento.
+- **Ajuste nos Testes**: Corrigi mensagens de erro nos testes xUnit, garantindo precisão.
+- **Correção no CI**: Troquei `uses` por `run` no `dotnet restore` do GitHub Actions, resolvendo um erro de execução.
+
 ## Design Patterns
 
 ### **Command Pattern**
