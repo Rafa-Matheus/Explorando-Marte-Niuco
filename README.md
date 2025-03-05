@@ -147,6 +147,14 @@ jobs:
 
 **Funcionamento:** Executa a cada push ou pull request para a branch **main**, baixando o código, configurando **.NET 7.0**, restaurando dependências, compilando e rodando os testes.
 
+## Vídeos no YouTube
+
+Acompanhe o desenvolvimento do sistema nos vídeos abaixo:
+
+- [Desafio Niuco - Pt. 1](https://www.youtube.com/watch?v=cMezdz5UrRw&t=69s)
+- [Desafio Niuco - Pt. 2](https://www.youtube.com/watch?v=nFcqDwDOTDM&t=752s)
+- [Desafio Niuco - Pt. 3](https://www.youtube.com/watch?v=Te-oG943iQ8&t=4s)
+
 ## Agradecimentos
 
 Agradeço à **Niuco** pela oportunidade de participar deste desafio técnico! Foi incrível desenvolver esta solução com boas práticas e automação. 
